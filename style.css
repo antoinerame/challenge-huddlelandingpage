@@ -63,10 +63,16 @@ button:focus {
 
 .body-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 80%;
+    margin-top: 6%;
 }
+
+.body-image > img {
+    width: 100%;
+    height: 100%;
+}
+
 
 .body-right {
     display: flex;
@@ -77,11 +83,10 @@ button:focus {
 .body-container > div {
     width: 50%;
     height: 100%;
-    margin-top: 10%;
 }
 
 .body-image {
-    background: url(images/illustration-mockups.svg) no-repeat;
+    height: initial !important;
 }
 
 .container {
@@ -120,4 +125,64 @@ button:focus {
 .social > svg:hover {
     color: hsl(300, 69%, 71%);
     border-color:  hsl(300, 69%, 71%);
+}
+
+@media only screen and (max-width: 750px) {
+    html {
+        overflow: auto;
+    }
+
+    .container {
+        background: url(images/bg-mobile.svg) no-repeat;
+        background-size: contain;
+    }
+
+    .body-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .body-container > div {
+        width: 100%;
+        margin: 0;
+    }
+
+    header {
+        margin-left: 5%;
+        padding-top: 3%;
+    }
+
+    .body-container {
+        height: 100%;
+    }
+
+    footer {
+        justify-content: space-around;
+        margin-top: 10%;
+        padding-bottom: 2%;
+    }
+
+    .social {
+        width: 35%;
+    }
+
+    button {
+        align-self: center;
+        margin: 3.5rem 0rem 0px 0px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 0px 45px;
+    }
+
+    .social {
+        width: 45%;
+    }
 }
